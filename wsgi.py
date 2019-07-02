@@ -5,8 +5,8 @@ application = Flask(__name__)
 def hello():
     return "Hello World!"
 	
-	@application.route("/tamil")
-def hello():
+@application.route("/tamil")
+def hellotamil():
     return "vanakam"
 	
 
