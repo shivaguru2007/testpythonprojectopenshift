@@ -1,1 +1,2 @@
-worker: python wsgi.py
+web: python wsgi.py
+heroku ps
