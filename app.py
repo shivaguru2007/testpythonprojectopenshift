@@ -5,7 +5,8 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return render_template('index.html',user="shiva")
+	list1 = ['python','java','c++']
+    return render_template('index.html',user="shiva",list1=list1)
 	
 @application.route("/tamil")
 def hellotamil():
