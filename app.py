@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template,redirect
 import os
 from main.forms import LoginForm
 application = Flask(__name__)
@@ -19,9 +19,9 @@ def login():
 	form = LoginForm()
 	if form.validate_on_submit():
 		if form.username.data == config.USERNAME and form.password.data == config.PASSWORD:
-			return "user authenticated."
+			redirect("/tamil")
 		else:
-			return "authentication fail"
+			redirect("/tamil")
 	return render_template('loginpage.html',form=form)
 
 	
