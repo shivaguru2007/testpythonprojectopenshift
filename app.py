@@ -20,6 +20,8 @@ def login():
 	if form.validate_on_submit():
 		if form.username.data == config.USERNAME and form.password.data == config.PASSWORD:
 			return "user authenticated."
+		else:
+			return "authentication fail"
 	return render_template('loginpage.html',form=form)
 
 	
