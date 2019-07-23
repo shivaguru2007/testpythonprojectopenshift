@@ -1,12 +1,14 @@
 {% extends "index.html"%}
 {%block login%}
-<h1><text color='blue'> Sign-In</h1>
+
+
+<h1><span class="label label-default	"> Log-In</span></h1>
 <br>
 <form action='' method='post'>
 {{form.hidden_tag()}}
-{{form.username.label}}   {{form.username}}
+{{form.username.label(class_="label label-default")}}   {{form.username}}
 <br><br><br>
-{{form.password.label}}   {{form.password}}
+{{form.password.label(class_="label label-default")}}   {{form.password}}
 <br><br><br>
 {{form.submit()}}
 </form>

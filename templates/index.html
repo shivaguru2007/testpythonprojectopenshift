@@ -1,9 +1,45 @@
 <html>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <style>
+body  {
+  background-image: url("/static/bg1.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;	
+  height: 100%; 
+}
+
+.label {
+  color: white;
+  padding: 8px;
+}
+
+.signin {background-color: #4CAF50;} 
+
+.button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+</style>
 <body>
-<h2> welcome {{user}} </h2>
+
 <br>
 {%block login%} {%endblock%}
-{%block footer%} {%endblock%}
 
 </body>
 </html>

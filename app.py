@@ -19,12 +19,14 @@ def login():
 	form = LoginForm()
 	if form.validate_on_submit():
 		if form.username.data == config.USERNAME and form.password.data == config.PASSWORD:
-			redirect("/tamil")
+			return render_template('userauth.html',iscorrectuser=True)
 		else:
-			redirect("/tamil")
+			return  render_template('userauth.html',iscorrectuser=False)
 	return render_template('loginpage.html',form=form)
 
-	
+
+
+
 @application.route("/tamil")
 def hellotamil():
     return "vanakam"

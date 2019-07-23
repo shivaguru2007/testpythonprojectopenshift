@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type = "text/javascript">
+         
+            function redirecttologin() {
+               window.location.href = '/login';
+            }
+      </script>
+</head>
+<body>
+{% if iscorrectuser%}
+ <p> User authentication success</p>
+ <p> Redirecting in few seconds...</p>
+ <script>
+ setTimeout(function(){ redirecttologin(); }, 5000);
+</script>
+{% else %}
+ <p> User authentication failed</p>
+ <p> Redirecting to Login . Please try again</p>
+ <script>
+ setTimeout(function(){ redirecttologin(); }, 5000);
+</script>
+{% endif%}
+</body>
+</html>
